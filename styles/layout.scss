@@ -8,6 +8,13 @@ footer {
   align-items: center;
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+}
+
 .container {
   width: 100%;
 
@@ -26,4 +33,12 @@ footer {
   @media (min-width: v.$large) {
     width: 1320px;
   }
+}
+
+.navigation ul {
+  display: flex;
+  gap: var(--gap);
+  font: var(--smaller-font);
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
 }
