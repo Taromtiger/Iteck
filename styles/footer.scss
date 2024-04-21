@@ -1,5 +1,5 @@
 footer {
-  --wave-size: 269px;
+  --wave-height: 269px;
 
   position: relative;
   margin-top: 169px;
@@ -10,8 +10,8 @@ footer {
     top: -169px;
     left: 0;
     right: 0;
-    width: 100%;
-    height: var(--wave-size);
+    width: 99.9%;
+    height: var(--wave-height);
     background-image: url('./../assets/images/footer_wave.png');
     background-repeat: no-repeat;
     background-size: cover;
