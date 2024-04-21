@@ -1,5 +1,35 @@
 footer {
-  margin-top: auto;
+  --wave-size: 269px;
+
+  position: relative;
+  margin-top: 169px;
+  background-color: var(--cream-color);
+
+  .footer__wave {
+    position: absolute;
+    top: -169px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: var(--wave-size);
+    background-image: url('./../assets/images/footer_wave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    animation: wave 2s ease-in-out infinite alternate both;
+
+    @keyframes wave {
+      0% {
+        transform: rotate(1deg);
+      }
+
+      100% {
+        transform: rotate(-1deg);
+      }
+    }
+  }
 }
 
 .footer__container {

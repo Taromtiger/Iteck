@@ -25,9 +25,28 @@ header {
   }
 
   .header__buttons {
+    position: relative;
     width: 208px;
     display: flex;
     gap: var(--gap);
+  }
+
+  .header__lang {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    div {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+    }
   }
 }
 
