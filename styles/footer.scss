@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 footer {
   --wave-height: 269px;
 
@@ -7,7 +9,7 @@ footer {
 
   .footer__wave {
     position: absolute;
-    top: -169px;
+    top: -177px;
     left: 0;
     right: 0;
     width: 99.9%;
@@ -33,8 +35,8 @@ footer {
 }
 
 .footer__container {
+  padding-bottom: 20px;
   gap: calc(var(--gap) * 2);
-  padding: calc(var(--gap) * 2) 0;
 }
 
 .footer__container,
@@ -48,12 +50,27 @@ footer {
   gap: var(--gap);
 }
 
+.footer__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: 0;
+
+  @media (min-width: v.$mobile) {
+    flex-direction: row;
+    margin: calc(var(--gap) * 2) 0;
+  }
+}
+
 .footer__navigation ul {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 
   li {
     display: flex;
-    width: 80px;
+    width: 70px;
     align-self: start;
   }
 }
@@ -61,25 +78,25 @@ footer {
 .footer__center {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
   gap: var(--gap);
   padding: var(--gap) 0;
   border-bottom: 1px solid var(--grey-color);
+
+  @media (min-width: v.$tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-.footer__buttons {
-  display: flex;
-  gap: var(--gap);
-  margin: calc(var(--gap) * 2) 0;
+.footer__logo {
+  margin: 0 auto;
 }
 
-.footer__language {
-  width: 208px;
-}
-
-.footer__navigation ul {
-  gap: 15px;
+.footer__button {
+  white-space: nowrap;
 }
 
 .footer__bottom {

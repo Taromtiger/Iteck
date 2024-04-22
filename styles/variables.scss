@@ -1,17 +1,29 @@
 // breakpoints
 $mobile: 576px;
 $tablet: 768px;
+$big-tablet: 992px;
 $desktop: 1200px;
 $large: 1400px;
 
 :root {
   // font
-  --default-font: 400 14px 'Inter', sans-serif;
-  --smaller-font: 700 12px 'Inter', sans-serif;
-  --biggest-font: 700 40px 'Inter', sans-serif;
+  --default-font: 400 13px 'Inter', sans-serif;
+  --smaller-font: 700 11px 'Inter', sans-serif;
+  --biggest-font: 700 24px 'Inter', sans-serif;
 
   // spacers
   --gap: 25px;
 
   --transition: 0.5s;
+
+  @media (min-width: $mobile) {
+    --gap: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    --gap: 15px;
+    --default-font: 400 14px 'Inter', sans-serif;
+    --smaller-font: 700 12px 'Inter', sans-serif;
+    --biggest-font: 700 40px 'Inter', sans-serif;
+  }
 }
