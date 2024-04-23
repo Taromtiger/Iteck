@@ -92,7 +92,17 @@ footer {
 }
 
 .footer__logo {
-  margin: 0 auto;
+  @media (max-width: v.$mobile) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: v.$mobile) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: v.$tablet) {
+    margin: 0;
+  }
 }
 
 .footer__button {
@@ -102,5 +112,9 @@ footer {
 .footer__bottom {
   a {
     text-decoration: underline;
+  }
+
+  @media (max-width: v.$mobile) {
+    text-align: center;
   }
 }
