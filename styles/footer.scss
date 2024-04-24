@@ -5,7 +5,7 @@ footer {
 
   position: relative;
   margin-top: 169px;
-  background-color: var(--cream-color);
+  background-color: var(--creame-color);
 
   .footer__wave {
     position: absolute;
@@ -24,11 +24,11 @@ footer {
 
     @keyframes wave {
       0% {
-        transform: rotate(1deg);
+        transform: rotate(1deg) scaleX(-1);
       }
 
       100% {
-        transform: rotate(-1deg);
+        transform: rotate(-1deg) scaleX(-1);
       }
     }
   }
@@ -73,6 +73,12 @@ footer {
     display: flex;
     width: 70px;
     align-self: start;
+  }
+
+  @media (max-width: v.$tablet) {
+    li {
+      width: auto;
+    }
   }
 }
 
