@@ -1,4 +1,4 @@
-@use 'variables' as v;
+@use 'variables' as var;
 
 header,
 main,
@@ -12,19 +12,19 @@ footer {
   width: calc(100% - (var(--gap) * 2));
   padding: 0 var(--gap);
 
-  @media (min-width: v.$mobile) {
+  @media (min-width: var.$mobile) {
     width: 540px;
   }
 
-  @media (min-width: v.$tablet) {
+  @media (min-width: var.$tablet) {
     width: 720px;
   }
 
-  @media (min-width: v.$desktop) {
+  @media (min-width: var.$desktop) {
     width: 1170px;
   }
 
-  @media (min-width: v.$large) {
+  @media (min-width: var.$large) {
     width: 1320px;
   }
 }

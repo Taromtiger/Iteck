@@ -1,4 +1,5 @@
-@use 'styles/variables' as v;
+@use 'styles/variables' as var;
+@use 'mixins' as localMixins;
 
 .one-app {
   position: relative;
@@ -7,32 +8,23 @@
   margin-top: $double-gap;
 
   &__animation {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('assets/images/initial/one-app-bubble.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: -1;
-
-    animation: rotate-center 100s linear infinite both;
+    @include localMixins.rotate-center(
+      $img-path: 'assets/images/initial/one-app-bubble.png'
+    );
   }
 
   &__container {
     display: flex;
     flex-direction: column;
 
-    @media (min-width: v.$big-tablet) {
+    @media (min-width: var.$big-tablet) {
       flex-direction: row;
     }
   }
 
   &__left,
   &__right {
-    @media (min-width: v.$big-tablet) {
+    @media (min-width: var.$big-tablet) {
       flex: 1;
     }
   }
@@ -47,25 +39,17 @@
       align-self: flex-start;
     }
 
-    @media (min-width: v.$big-tablet) {
+    @media (min-width: var.$big-tablet) {
       margin-bottom: 0;
     }
   }
 
   &__right {
-    height: 390px;
-    background-image: url('assets/images/initial/one-app-background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @media (min-width: v.$tablet) {
-      height: 500px;
-    }
-
-    @media (min-width: v.$big-tablet) {
-      height: 660px;
-    }
+    @include localMixins.half-container-image(
+      'assets/images/initial/one-app-background.png',
+      var.$tablet,
+      var.$big-tablet
+    );
   }
 
   &__buttons {
@@ -82,7 +66,7 @@
       padding: 0 20px;
       position: absolute;
 
-      @media (min-width: v.$big-tablet) {
+      @media (min-width: var.$big-tablet) {
         left: 30px;
       }
     }
@@ -92,7 +76,7 @@
     display: none;
   }
 
-  @media (min-width: v.$big-tablet) {
+  @media (min-width: var.$big-tablet) {
     br {
       display: block;
     }
@@ -133,7 +117,7 @@
     padding: 0 20px;
     position: absolute;
 
-    @media (min-width: v.$big-tablet) {
+    @media (min-width: var.$big-tablet) {
       left: 30px;
     }
   }
