@@ -56,14 +56,14 @@
       text-align: center;
     }
   }
+}
 
-  &__wave {
-    position: absolute;
-    bottom: -12px;
-    width: 100%;
-    height: 12px;
-    @include globalMixins.background-img('assets/images/initial/wave.png');
+.features__wave {
+  position: absolute;
+  bottom: -12px;
+  width: 100%;
+  height: 12px;
+  @include globalMixins.background-img('assets/images/initial/wave.png');
 
-    z-index: var(--nice-index);
-  }
+  z-index: var(--nice-index);
 }
