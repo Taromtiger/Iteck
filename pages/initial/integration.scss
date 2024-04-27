@@ -5,9 +5,14 @@
   position: relative;
   width: 100%;
   margin-top: var(--gap);
+  margin-bottom: 50px;
   @include globalMixins.background-img(
     'assets/images/initial/integration-background.png'
   );
+
+  @media (min-width: var.$desktop) {
+    margin-bottom: 150px;
+  }
 
   .text_biggest {
     text-align: center;
@@ -24,9 +29,15 @@
   &__icons {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: var.$mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--gap);
+    }
   }
 
   &__icon {
@@ -44,16 +55,16 @@
     }
 
     &_google-calendar {
-      width: 90px;
-      height: 90px;
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
       background-color: #ead4fc;
       animation-delay: 0.5s;
     }
 
     &_zeplin {
-      width: 60px;
-      height: 60px;
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
       background-color: #fcf3dc;
       animation-delay: 1s;
