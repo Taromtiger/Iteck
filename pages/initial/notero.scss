@@ -91,28 +91,28 @@
       }
     }
   }
+}
 
-  &__benefit {
+.notero__benefit {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 10px;
+
+  div {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    gap: 10px;
+    padding: 8px;
+    background-color: var(--creame-color);
+    border-radius: 50%;
+  }
 
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 8px;
-      background-color: var(--creame-color);
-      border-radius: 50%;
-    }
+  svg {
+    fill: var(--violett-color);
+  }
 
-    svg {
-      fill: var(--violett-color);
-    }
-
-    p {
-      align-self: center;
-    }
+  p {
+    align-self: center;
   }
 }

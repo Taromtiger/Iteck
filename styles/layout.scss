@@ -10,6 +10,7 @@ footer {
 
 .container {
   width: calc(100% - (var(--gap) * 2));
+
   padding: 0 var(--gap);
 
   @media (min-width: var.$mobile) {
