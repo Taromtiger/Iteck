@@ -22,10 +22,6 @@
     width: 100%;
   }
 
-  svg {
-    fill: var(--yellow-color);
-  }
-
   &__right {
     display: flex;
     flex-direction: column;
@@ -35,7 +31,13 @@
 
   img {
     @media (max-width: var.$mobile) {
-      width: 50px;
+      display: none;
+    }
+  }
+
+  &__stars {
+    svg {
+      fill: var(--yellow-color);
     }
   }
 }

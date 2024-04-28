@@ -11,6 +11,10 @@
   width: 100%;
   margin: 69px 0;
 
+  @media (max-width: var.$tablet) {
+    margin-bottom: 40px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -37,18 +41,19 @@
 
   &__icons {
     display: flex;
-    gap: 35px;
+    gap: 30px;
 
     @media (min-width: var.$mobile) {
       gap: 45px;
     }
 
-    &__left,
-    &__right {
-      width: 130px;
+    &_left,
+    &_right {
+      max-width: 130px;
+      width: 100%;
     }
 
-    &__left {
+    &_left {
       border-right: 1px solid var(--grey-color);
     }
 
@@ -59,6 +64,7 @@
 
     img {
       height: 66px;
+      width: 66px;
     }
   }
 
@@ -70,6 +76,11 @@
   &__right {
     position: relative;
     height: 500px;
+
+    @media (max-width: var.$mobile) {
+      height: 400px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -86,7 +97,21 @@
       );
 
       animation: rotate-center 100s linear infinite both;
+
+      @media (max-width: var.$big-tablet) {
+        height: 600px;
+        top: -20%;
+      }
+
+      @media (max-width: var.$mobile) {
+        height: 500px;
+        top: -10%;
+      }
     }
+  }
+
+  .card__stars {
+    margin-bottom: 7px;
   }
 
   .cards {
